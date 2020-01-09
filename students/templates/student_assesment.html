@@ -1,0 +1,30 @@
+{% extends 'students_home.html' %}
+
+{% block content %}
+
+<table class="container-fluid table">
+    <thead>
+      <tr>
+        <th scope="col">Student name</th>
+        <th scope="col">Subject</th>
+        <th scope="col">Assesment no.</th>
+        <th scope="col">Total marks</th>
+        <th scope="col">Marks scored</th>
+      </tr>
+    </thead>
+    <tbody>
+        {%if assesmenttable %}
+      <tr>
+         {% for a in assesmenttable %} 
+        <th scope="row">{{a.s_name}}</th>
+        <td>{{a.a_subject}}</td>
+        <td>{{a.a_no}}</td>
+        <td>{{a.t_total}}</td>
+        <td>{{a.t_mark}}</td>
+        </tr>
+        {% endfor %}
+      {% endif%}
+    </tbody>
+</table>
+
+{% endblock %}

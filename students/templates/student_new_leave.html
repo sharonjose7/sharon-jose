@@ -1,0 +1,39 @@
+{% extends 'students_home.html' %}
+
+{% block content %}
+
+<div class="mt-2 ml-5 mb-2">
+    <h3>Leave form</h3>
+<form class="" action="{% url 'student_leave_submission' %}" method="POST">
+  {% csrf_token %}
+  <div class="mt-6 form-group row">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Student name:</label>
+      <div class="col-sm-5">
+        <input type="text" readonly class="form-control" name="name" value="{{ studentname.s_name }}">
+      </div>
+    </div>
+    <div class="mt-6 form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">From date:</label>
+        <div class="col-sm-5">
+          <input type="date" class="form-control" name="fdate" value="">
+        </div>
+      </div>
+  <div class="mt-6 form-group row">
+    <label for="staticEmail" class="col-sm-2 col-form-label">To date:</label>
+    <div class="col-sm-5">
+      <input type="date"  class="form-control" name="tdate" value="">
+    </div>
+  </div>
+  <div class="form-group row">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Reason:</Address>:</label>
+      <div class="col-sm-5">
+        <textarea type="text"  class="form-control" name="reason" value=""></textarea>
+      </div>
+    </div>  
+    <div class="text-center">
+        <button type="submit" class="btn btn-outline-secondary">Cancel</button>
+        <button type="submit" class="btn btn-outline-secondary">Send</button>
+        </div>  
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'faculties_home.html' %}
+
+{% block content %}
+
+<div class="mt-2 ml-5 mb-2">
+    <h3>Assesment details</h3>
+    {% if studentview %}
+<form class="" action="{% url 'assesment_adds' %}" method="post">
+  {% csrf_token %}
+  <div class="mt-6 form-group row">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Student name:</label>
+      <div class="col-sm-5">
+        <input type="text" readonly class="form-control" name="name" value="{{studentview.s_name}}">
+      </div>
+    </div>
+    <div class="mt-6 form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Batch:</label>
+        <div class="col-sm-5">
+          <input type="text" readonly class="form-control" name="batch" value="{{studentview.b_batch}}">
+        </div>
+      </div>
+  <div class="mt-6 form-group row">
+    <label for="staticEmail" class="col-sm-2 col-form-label">Subject:</label>
+    <div class="col-sm-5">
+      <input type="text"  class="form-control" name="subject" value="">
+    </div>
+  </div>
+  <div class="form-group row">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Assesment number:</Address>:</label>
+      <div class="col-sm-5">
+        <input type="text"  class="form-control" name="a_no" value="">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Total mark:</Address>:</label>
+      <div class="col-sm-5">
+        <input type="text"  class="form-control" name="t_mark" value="">
+      </div>
+    </div>
+    <div class="mt-6 form-group row">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Mark scored:</label>
+      <div class="col-sm-5">
+        <input type="text"  class="form-control" name="s_mark" value="">
+      </div>
+    </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-outline-secondary">Cancel</button>
+      <button type="submit" class="btn btn-outline-secondary">Save</button>
+      </div>
+</form>
+{% endif%}
+</div>
+{% endblock %}

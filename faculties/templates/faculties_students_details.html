@@ -1,0 +1,87 @@
+{% extends 'faculties_home.html' %}
+
+{% block content %}
+
+  <div class="mt-2 ml-5 mb-2">
+      <h3>Student details</h3>
+      
+  <form class="">
+    {% csrf_token %}
+    {% if studentview %}
+    <div class="mt-6 form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Addmission number:</label>
+        <div class="col-sm-5">
+          <input type="text" readonly class="form-control" name="addno" value="{{studentview.s_addno}}">
+        </div>
+      </div>
+    <div class="mt-6 form-group row">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Name:</label>
+      <div class="col-sm-5">
+        <input type="text" readonly class="form-control" name="name" value="{{studentview.s_name}}">
+      </div>
+    </div>
+    <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Address:</Address>:</label>
+        <div class="col-sm-5">
+          <input type="text" readonly class="form-control" name="address" value="{{studentview.s_address}}">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Gender:</Address>:</label>
+        <div class="col-sm-5">
+          <input type="text" readonly class="form-control" name="address" value="{{studentview.s_gender}}">
+        </div>
+      </div>
+      <div class="mt-6 form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Addmission date:</label>
+        <div class="col-sm-5">
+          <input type="text" readonly class="form-control" name="adddate" value="{{studentview.s_adddate}}">
+        </div>
+      </div>
+      <div class="mt-6 form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Date of birth:</label>
+        <div class="col-sm-5">
+          <input type="text" readonly class="form-control" name="dob" value="{{studentview.s_dob}}">
+        </div>
+      </div>
+      <div class="mt-6 form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Guardian:</label>
+        <div class="col-sm-5">
+          <input type="text" readonly class="form-control" name="guardian" value="{{studentview.s_guardian}}">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Mobile:</label>
+        <div class="col-sm-5">
+          <input type="text" readonly class="form-control" name="mobile" value="{{studentview.s_mobile}}">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">E-mail:</label>
+        <div class="col-sm-5">
+          <input type="text" readonly class="form-control" name="email" value="{{studentview.s_email}}">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Qualification:</label>
+        <div class="col-sm-5">
+          <input type="text" readonly class="form-control" name="qualification" value="{{studentview.s_qualification}}">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Batch:</label>
+        <div class="col-sm-5">
+          <input type="text" readonly class="form-control" name="batch" value="{{studentview.b_batch}}">
+        </div>
+      </div>
+      <div class="text-center">
+         <button type="submit" class="btn btn-outline-secondary">Edit</button>
+        <button type="submit" class="btn btn-outline-secondary">Save</button>
+        <button type="submit" class="btn btn-outline-secondary">Delete</button>
+        </div>
+        {% endif%}
+  </form>
+  
+</div>
+
+  {% endblock %}

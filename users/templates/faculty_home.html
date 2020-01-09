@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <title>www.menu.com</title>
+	<style>
+    </style>
+    {% load static %}
+	<link rel="stylesheet" type='text/css' href="{% static 'css/style.css' %}">
+</head>
+<body class="back">
+    {% if data %}
+    {% for i in data %}
+    <div class="navbar">
+		<ul>
+			<a href="{% url 'index' %}">Home</a>
+		</ul>
+	</div>
+	<div class="signup_form">
+		
+			<a>Name:</a>
+			<input class="text_area" type="text" name="name" value="{{i.name}}">
+			<br>
+			<br>
+			<a>E-mail:</a>
+			<input class="text_area" type="text" name="email" value="{{i.email}}">
+			<br>
+			<br>
+			<a>Mobile:</a>
+			<input  class="text_area" type="text" name="mobile" value="{{i.mobile}}">
+			<br>
+			<br>
+			<input class="button" type="submit" value="Edit">
+			<input class="button" type="submit" value="Save">
+
+	</div>
+    {% endfor %}
+    {% endif %}
+    
+	<div class="ft">
+		<footer>
+			<p>&copy 2018-19 compony ltd
+			</p>
+		</footer>
+	</div>
+</body>
+</html>

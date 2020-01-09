@@ -1,0 +1,35 @@
+{% extends 'faculties_home.html' %}
+
+{% block content %}
+
+<table class="container-fluid table">
+    <thead>
+      <tr>
+        <th scope="col">Student id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Mobile</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+        {%if students1 %}
+      <tr>
+         {% for s in students1 %} 
+        <th scope="row">{{s.s_addno}}</th>
+        <td>{{s.s_name}}</td>
+        <td>{{s.s_mobile}}</td>
+        <td><a href="{% url 'faculties_student_details' %}?id={{ s.s_email }}" class="btn btn-outline-secondary  btn-arrow-right" role="button">more</a></td>
+        <td><a href="{% url 'student_assesment_form' %}?id={{ s.s_email }}" class="btn btn-outline-secondary  btn-arrow-right" role="button">Assesments</a></td>
+        <td><a href="{% url 'student_attendence_form' %}?id={{ s.s_email }}" class="btn btn-outline-secondary  btn-arrow-right" role="button">Attendence</a></td>
+
+        </tr>
+        {% endfor %}
+      {% endif%}
+    </tbody>
+</table>
+<div class="text-left">
+  <a href="{% url 'faculties_students_registration' %}" class="btn btn-outline-secondary  btn-arrow-right" role="button">Add +</a>
+    </div>
+
+{% endblock %}

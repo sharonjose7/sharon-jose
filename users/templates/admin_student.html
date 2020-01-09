@@ -1,0 +1,37 @@
+{% extends 'admin_home.html' %}
+
+{% block content %}
+
+    <table class="container-fluid table">
+      <thead>
+         <tr>
+             <th>Sl NO</th>
+             <th>Addmission number</th>
+             <th>Name</th>
+             <th>Mobile</th>
+             <th>E-mail</th>
+             <th>Batch</th>
+             <th></th>
+         </tr>
+    </thead>
+    <tbody>
+        {%if students %}
+      <tr>
+         {% for b in students %} 
+        <th scope="row">{{b.id}}</th>
+        <td>{{b.s_addno}}</td>
+        <td>{{b.s_name}}</td>
+        <td>{{b.s_mobile}}</td>
+        <td>{{b.s_email}}</td>
+        <td>{{b.b_batch}}</td>  
+        <td></td> 
+        <td><a href="{% url 'admin_student_details' %}?id={{ b.s_email }}" class="btn btn-outline-secondary  btn-arrow-right" role="button">More ></a></td></td>   
+        </tr>
+        {% endfor %}
+      {% endif%}
+    </tbody>
+  </table>
+  <div class="text-left">
+    <a href="{% url 'admin_student_registration' %}" class="btn btn-outline-secondary  btn-arrow-right" role="button">Add new</a>
+      </div>
+  {% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'faculties_home.html' %}
+
+{% block content %}
+
+  <div class="mt-5 ">
+      <h3>Faculty details</h3>
+      {%if data %}
+  <form class="">
+    {% csrf_token %}
+    <div class="mt-6 form-group row">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Name:</label>
+      <div class="col-sm-5">
+        <input type="text" readonly class="form-control" name="name" value="{{data.f_name}}">
+      </div>
+    </div>
+    <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Address:</label>
+        <div class="col-sm-5">
+          <input type="text" readonly class="form-control" name="address" value="{{data.f_address}}">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Mobile:</label>
+        <div class="col-sm-5">
+          <input type="text" readonly class="form-control" name="mobile" value="{{data.f_mobile}}">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">E-mail:</label>
+        <div class="col-sm-5">
+          <input type="text" readonly class="form-control" name="email" value="{{data.f_email}}">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Qualification:</label>
+        <div class="col-sm-5">
+          <input type="text" readonly class="form-control" name="qualification" value="{{data.f_qualfication}}">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Assigned batch:</label>
+        <div class="col-sm-5">
+          <input type="text" readonly class="form-control" name="batch" value="{{data.f_batch}}">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Password:</label>
+        <div class="col-sm-5">
+          <input type="text" readonly class="form-control" name="batch" value="{{data.f_password}}">
+        </div>
+      </div>
+      <div class="text-center">
+         <button type="submit" class="btn btn-outline-secondary">Edit</button>
+        <button type="submit" class="btn btn-outline-secondary">Save</button>
+        </div>
+  </form>
+      {% endif%}
+</div>
+
+  {% endblock %}

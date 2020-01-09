@@ -1,0 +1,40 @@
+{% extends 'faculties_home.html' %}
+
+{% block content %}
+<div>
+    <table class="container-fluid table">
+      <thead>
+         <tr>
+             <th>Sl NO</th>
+             <th>Student name</th>
+             <th>From date</th>
+             <th>To date</th>
+             <th>Reason</th>
+         </tr>
+    </thead>
+    <tbody>
+        {%if leaveview %}
+      <tr>
+         {% for l in leaveview %}
+         <th></th> 
+        <th scope="row">{{l.id}}</th>
+        <td>{{l.s_name}}</td>
+        <td>{{l.l_fromdate}}</td>
+        <td>{{l.l_todate}}</td>  
+        <td>{{l.l_reason}}</td> 
+        </tr>
+        {% endfor %}
+      {% endif%}
+    </tbody>
+  </table>
+  <form class="mt-3 ml-5" action="{% url 'faculty_leave_approve' %}" method="post">
+    {% csrf_token %}
+    <div class="form-group row">
+        <div class="">
+          <input type="number" placeholder="Select application id" class="form-control" name="approveid" value="">
+        </div>
+        <a><button type="submit" class="btn btn-outline-secondary">Approve</button></a>
+      </div>
+  </form>
+  </div>
+  {% endblock %}

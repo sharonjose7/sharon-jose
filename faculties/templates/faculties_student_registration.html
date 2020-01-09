@@ -1,0 +1,82 @@
+{% extends 'faculties_home.html' %}
+
+{% block content %}
+
+  <div class="mt-1 ml-5 mb-3">
+      <h3>Student registration</h3>
+  <form class="" action="{% url 'students_adds' %}" method="post">
+    {% csrf_token %}
+    <div class="mt-6 form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Admission number:</label>
+        <div class="col-sm-5">
+          <input type="text"  class="form-control" name="addno" value="">
+        </div>
+      </div>
+    <div class="mt-6 form-group row">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Name:</label>
+      <div class="col-sm-5">
+        <input type="text"  class="form-control" name="name" value="">
+      </div>
+    </div>
+    <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Address:</Address>:</label>
+        <div class="col-sm-5">
+          <input type="text"  class="form-control" name="address" value="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">gender:</Address>:</label>
+        <div class="col-sm-5">
+          <input type="text"  class="form-control" name="gender" value="">
+        </div>
+      </div>
+      <div class="mt-6 form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Admission date:</label>
+        <div class="col-sm-5">
+          <input type="date"  class="form-control" name="adddate" value="">
+        </div>
+      </div>
+      <div class="mt-6 form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Date of birth:</label>
+        <div class="col-sm-5">
+          <input type="date"  class="form-control" name="dob" value="">
+        </div>
+      </div>
+      <div class="mt-6 form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Guardian:</label>
+        <div class="col-sm-5">
+          <input type="text"  class="form-control" name="guardian" value="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Mobile:</label>
+        <div class="col-sm-5">
+          <input type="text"  class="form-control" name="mobile" value="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">E-mail:</label>
+        <div class="col-sm-5">
+          <input type="text"  class="form-control" name="email" value="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Qualification:</label>
+        <div class="col-sm-5">
+          <input type="text"  class="form-control" name="qualification" value="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Password:</label>
+        <div class="col-sm-5">
+          <input type="text"  class="form-control" name="password" value="">
+        </div>
+      </div>
+      <div class="text-center">
+         <button type="submit" class="btn btn-outline-secondary">Cancel</button>
+        <button type="submit" class="btn btn-outline-secondary">Register</button>
+        </div>
+  </form>
+</div>
+
+  {% endblock %}

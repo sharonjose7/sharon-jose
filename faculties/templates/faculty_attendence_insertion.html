@@ -1,0 +1,59 @@
+{% extends 'faculties_home.html' %}
+
+{% block content %}
+
+<form class="mt-3" action="" method="post">
+    {% csrf_token %}
+    <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Select date:</label>
+        <div class="">
+          <input type="date" placeholder="Select date" class="form-control" name="a_date" value="">
+        </div>
+        <a><button type="submit" class="btn btn-outline-secondary">Select</button></a>
+      </div>
+</form>
+
+<table class="container-fluid table">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Students name</th>
+        <th scope="col">Hour 1</th>
+        <th scope="col">Hour 2</th>
+        <th scope="col">Hour 3</th>
+        <th scope="col">Hour 4</th>
+      </tr>
+    </thead>
+    <tbody>
+        {%if studentdata %}
+      <tr>
+         {% for s in studentdata %} 
+        <!-- <th scope="row"><div class="col-sm-2">
+            <input type="date" readonly class="form-control" name="a_date" value="">
+          </div>
+        </th> -->
+        <td scope="row">{{s.s_name}}</td>
+        <!-- <td><div class="col-sm-2">
+            <input type="date"  class="form-control" name="adddate" value="">
+          </div>
+        </td> -->
+        <!-- <td><div class="col-sm-2">
+            <input type="date"  class="form-control" name="adddate" value="">
+          </div>
+        </td>
+        <td><div class="col-sm-2">
+            <input type="date"  class="form-control" name="adddate" value="">
+          </div>
+        </td>
+        <td><div class="col-sm-2">
+            <input type="date"  class="form-control" name="adddate" value="">
+          </div>
+        </td> -->
+        
+        </tr>
+        {% endfor %}
+      {% endif%}
+    </tbody>
+</table>
+
+{% endblock %}

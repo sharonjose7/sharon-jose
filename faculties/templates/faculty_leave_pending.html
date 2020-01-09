@@ -1,0 +1,31 @@
+{% extends 'faculties_home.html' %}
+
+{% block content %}
+<div>
+    <table class="container-fluid table">
+      <thead>
+         <tr>
+             <th>Sl NO</th>
+             <th>Faculty name</th>
+             <th>From date</th>
+             <th>To date</th>
+             <th>Reason</th>
+         </tr>
+    </thead>
+    <tbody>
+        {%if leaveview %}
+      <tr>
+         {% for l in leaveview %}
+         <th></th> 
+        <th scope="row">{{l.id}}</th>
+        <td>{{l.f_name}}</td>
+        <td>{{l.l_fromdate}}</td>
+        <td>{{l.l_todate}}</td>  
+        <td>{{l.l_reason}}</td> 
+        </tr>
+        {% endfor %}
+      {% endif%}
+    </tbody>
+  </table>
+  </div>
+  {% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'admin_home.html' %}
+
+{% block content %}
+
+    <table class="container-fluid table">
+      <thead>
+         <tr>
+             <th>Sl NO</th>
+             <th>Batch</th>
+             <th>No of Students</th>
+             <th>Incharge</th>
+             <th></th>
+         </tr>
+    </thead>
+    <tbody>
+        {%if batches %}
+      <tr>
+         {% for b in batches %} 
+        <th scope="row">{{b.id}}</th>
+        <td>{{b.b_batch}}</td>
+        <td>{{b.b_nostudents}}</td>
+        <td>{{b.b_incharge}}</td>   
+        <td><a href="{% url 'admin_batch_students_table'%}?batch={{b.b_batch}}" class="btn btn-outline-secondary  btn-arrow-right" role="button">Students details</a></td>    
+        </tr>
+        {% endfor %}
+      {% endif%}
+    </tbody>
+  </table>
+  <div class="text-left">
+    <a href="{% url 'admin_batch_registration'%}" class="btn btn-outline-secondary  btn-arrow-right" role="button">Add +</a>
+    <!-- <a href="" class="btn btn-outline-secondary  btn-arrow-right" role="button">Delete</a> -->
+    <!-- <a href="" class="btn btn-outline-secondary  btn-arrow-right" role="button">Edit</a> -->
+    <!-- <a href="" class="btn btn-outline-secondary  btn-arrow-right" role="button">Save</a> -->
+      </div>
+  {% endblock %}

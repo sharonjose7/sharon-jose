@@ -1,0 +1,322 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+.back
+{
+    
+}
+.index_home
+{
+	margin-left: 65%;
+	margin-top: 17%;
+}
+.index_home ul
+{
+	list-style-type: none;
+}
+.index_home ul li
+{
+	width:300px;
+	padding:20px;
+	margin:6px;
+	border: 2px solid black;
+	text-align: center;
+}
+.index_home ul li a
+{
+	text-decoration:none;
+	color:#000066;
+}
+.navbar1
+{
+	background-color:#000066;
+	text-align:center;
+}
+.navbar1 ul{
+	list-style-type:none;
+	display:inline-flex ;
+}
+.navbar1 ul li
+{
+	width:100px;
+	padding:15px;
+	margin:6px;
+	border-radius:20px;
+}
+.navbar1 ul li a
+{
+	text-decoration:none;
+	color:white;
+}
+.navbar1 ul li:hover
+{
+	background-color:grey;
+	padding:20px;
+	transition:2s;
+}
+.signup_form
+{
+    background-color:rgba(0,0,0,.6);
+    height: 450px;
+    width: 550px;
+    margin-top: 40px;
+    margin-left: 450px;
+    position: relative;
+    
+}
+.signup_form form
+{
+    padding-top: 50px;
+    text-align: center;
+}
+.signup_form form a
+{
+    color: grey;
+}
+.text_area
+{
+    margin:10px;
+    padding:6px;
+    width: 230px;
+	outline:none;
+	border:1px solid #5b8084;
+	color:white;
+    background-color: rgba(0,0,0,0);
+    outline: none;
+}
+.button
+{
+    float:center;
+    margin-top: 20px;
+	padding:15px 50px ;
+	background-color:rgba(0,0,0,.6);
+	border:none;
+	color:grey;
+	outline:none;
+	border-radius:30px;
+}
+.login_form
+{
+	width:500px;
+	position:relative;
+	left:33%;
+	text-align:center;
+	padding:40px;
+    margin-top:80px;
+    margin-bottom: 107px;
+	background-color:rgba(0,0,0,.7);
+}
+.login_table
+{
+	margin-top: 0px;
+	text-align: center;	
+}
+
+.login_text
+{
+	margin:10px;
+	padding:6px;
+	outline:none;
+	border:1px solid #5b8084;
+	color:white;
+    background-color: rgba(0,0,0,0);
+    outline: none;
+}
+.blogin
+{
+    float:center;
+    margin-top: 20px;
+	padding:15px 50px ;
+	background-color:rgba(0,0,0,.6);
+	border:none;
+	color:grey;
+	outline:none;
+	border-radius:30px;
+}
+.login_form form a
+{
+    color: grey;
+}
+.signup_login
+{
+    padding: 20px;
+    margin-left: 150px;
+    color: grey;
+}
+.login_signup
+{
+    padding: 20px;
+    margin-left: 10%;
+    color: grey;
+}
+.login_signup a
+{
+    text-decoration: none;
+    color: red;
+}
+.signup_login a
+{
+    text-decoration: none;
+    color: red;
+}
+.ft
+{
+	background-color:#000066;
+	width:100%;
+	padding-top:20px;
+	padding-bottom:20px;
+	text-align:center;
+	color:white;
+	
+}
+
+
+.main_margin
+{
+	margin-bottom: 305px;
+}
+.batchform
+{
+	border: 1px solid grey;
+	padding: 40px;
+	margin-left: 400px;
+	margin: 100px;
+	height: 500px;
+}
+
+.form_1{
+border:1px solid gray;
+padding: 40px;
+margin-left: 400px;
+margin: 100px;
+height:500px;
+}
+.bg_color{
+    background-color: rgba(0,0,0,0.6);
+}
+.faculty_1{
+    text-align: center;
+    margin: 30px;
+    padding-bottom: -30px;
+}
+.table_1{
+    width:75%;
+height:500px;
+}
+/* form1 */
+
+.margin_top{
+		margin-top:-30px;
+}
+    
+.button_1{
+    background-color:black;
+    margin: 50;
+    border-radius: 25px;
+    width:90px;
+    border-bottom:2px solid grey;
+    position:relative;
+    left:250px;
+    
+}
+   
+.button_2{
+    background-color:black;
+    margin: 50;
+    border-radius: 25px;
+    width:90px;
+    border-bottom:2px solid grey;
+    position:relative;
+    top:5px;
+    left:20px;
+    color:white;
+}
+/* table_2 */
+.table_2 tr td{
+    width:px;
+height:50px;
+}
+/* form-1 */
+.form_1{
+    border:1px solid gray;
+}
+.form_3{
+    border:1px solid gray;
+    width:250px;
+    padding: 40px;
+    margin: 180px;
+    margin-left: 500px;
+}
+.leave{
+    border:1px solid gray;
+    position: relative;
+    top:250px;
+    width:60%;
+    height: 550px;
+    padding: 40px;
+    margin: 50px;
+ 
+
+ 
+}
+.div_1{
+
+border:2px solid red;
+position: relative;
+top:80px;
+}
+
+.form_4{
+    marging:100px;
+    border:1px solid gray;
+    width:400px;
+   
+
+}
+.f1{
+
+    padding: 40px;
+}
+.form_3{
+    margin:100px;
+    margin-top:50px;
+    box-sizing:border-box;
+    height:300px;
+    width: 300px;
+
+}
+.login-form	
+{
+    width:340px;
+    margin:50px auto;
+}
+.login-form	 form{
+
+    margin-bottom:15px;
+    background:#f7f7f7;
+    box-shadow:0px 2px 2px rgba(0,0,0,0.3);
+    padding:30px;
+}
+.form-control, .btn{
+    min-height:38px;
+    border-radius:2px;
+}
+.btn{
+    font-size:15px;
+    font-weight:bold;
+}
+.bg-img{
+    background-image: url("../img/orisys2.jpg");
+    background-size: cover;
+}
+.bag{
+    background-color:rgba(0,0,0,0.7);
+    height: 550px;
+    margin-left: -15px;
+    width: 1366px;
+}
+.img_c img{
+    width: 300px;
+}

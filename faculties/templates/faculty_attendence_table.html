@@ -1,0 +1,35 @@
+{% extends 'faculties_home.html' %}
+
+{% block content %}
+
+<table class="container-fluid table">
+    <thead>
+      <tr>
+        <th scope="col">Student name</th>
+        <th scope="col">Date</th>
+        <th scope="col">Hour 1</th>
+        <th scope="col">Hour 2</th>
+        <th scope="col">Hour 3</th>
+        <th scope="col">Hour 4</th>
+      </tr>
+    </thead>
+    <tbody>
+        {%if attendencetable %}
+      <tr>
+         {% for a in attendencetable %} 
+        <th scope="row">{{a.s_name}}</th>
+        <td>{{a.a_date}}</td>
+        <td>{{a.a_h1}}</td>
+        <td>{{a.a_h2}}</td>
+        <td>{{a.a_h3}}</td>
+        <td>{{a.a_h4}}</td>
+        </tr>
+        {% endfor %}
+      {% endif%}
+    </tbody>
+</table>
+<div class="text-left">
+  <a href="{% url 'faculty_attendence_add' %}" class="btn btn-outline-secondary  btn-arrow-right" role="button">Add +</a>
+    </div>
+
+{% endblock %}
